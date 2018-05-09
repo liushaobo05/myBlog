@@ -1,7 +1,9 @@
 ---
 title: Linux下命令集
 date: 2018-05-03 18:20:38
+categories: linux
 tags:
+  - linx cli
 ---
 linux命令行作为开发运维一项必备的技能，熟练的使用命令行工具，可以提高日常开发效率和分析排错的能力。此文档主要为平时常使用的一些命令集合整理，方便自己查阅。
 
@@ -51,6 +53,9 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted univers
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
 EOF
+
+# 更换源
+$sed -i 's/http:\/\/archive\.ubuntu\.com\/ubuntu\//http:\/\/mirrors\.163\.com\/ubuntu\//g' /etc/apt/sources.list
 ```
 
 ##### node.js项目脚本启动文件
@@ -124,6 +129,49 @@ go install dreamgo
 export GOPATH="$OLDGOPATH"
 
 echo 'finished'
+```
+
+#### mysql脚本
+```
+#开启远程登录
+grant all privileges on *.* to 'user'@'%' identified by 'passwd' with grant option;
+
+#创建数据库
+create database DB;
+
+#创建用户
+insert into mysql.user(Host,User,Password) values("localhost","user",password("passwd"));
+
+#删除用户
+DELETE FROM user WHERE user="username" and HOST="localhost";
+
+#修改指定用户密码
+update mysql.user set password=password('new passwd') where user="username" and host="localhost";
+
+#用户授权
+grant all privileges on DB.* to 'user'@'localhost' identified by 'passwd';
+grant select,update on DB.* to 'user'@'localhost' identified by 'passwd';
+
+#刷新权限
+flush privileges;
+
+#数据库导出
+mysqldump -uUSRENAME -pPASSWD DATABASE > DATABASE.sql
+
+#数据库导出(只导出表结构 -d)
+mysqldump -uUSRENAME -pPASSWD -d DATABASE > DATABASE.sql
+
+#数据库导入
+
+#1.切换数据库
+use DATABASE;
+#2.设置编码
+set names utf8;
+#3.执行导入操作
+source /home/abc/abc.sql;
+
+#直接导入
+mysql -uUSERNAME -p DATABASE < DATABASE.sql
 ```
 
 #### shell编程

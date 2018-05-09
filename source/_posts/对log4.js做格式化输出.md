@@ -1,6 +1,7 @@
 ---
 title: 对log4.js做格式化输出
 date: 2018-05-08 14:51:00
+categories: node.js
 tags:
   - node.js
 ---

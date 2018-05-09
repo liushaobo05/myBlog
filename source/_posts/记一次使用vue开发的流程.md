@@ -1,7 +1,9 @@
 ---
 title: 记一次使用vue开发的流程
 date: 2018-04-27 22:34:59
+categories: node.js
 tags:
+  - node.js
 ---
 #### 开发前准备
 1. 项目开发规约的制定（参考腾讯前端团队规约http://alloyteam.github.io/CodeGuide/#naming）

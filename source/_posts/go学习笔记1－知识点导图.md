@@ -1,7 +1,9 @@
 ---
 title: go学习笔记1－知识点导图
 date: 2018-04-23 21:58:31
+categories: go
 tags:
+  - go
 ---
 
 ### go语言总览

@@ -1,7 +1,9 @@
 ---
 title: git常用命令清单
 date: 2018-05-04 13:04:33
+categories: 版本控制
 tags:
+  - git
 ---
 ![image](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015120901.png)
 由上图可知，代码管理也就是在以上四个空间处理。

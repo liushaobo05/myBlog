@@ -1,7 +1,9 @@
 ---
 title: gitlab实现持续集成
 date: 2018-04-27 16:13:29
+categories: devops
 tags:
+  - devops
 ---
 
 #### 背景

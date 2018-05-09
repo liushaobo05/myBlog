@@ -1,7 +1,9 @@
 ---
 title: git代码回滚
 date: 2018-05-03 18:30:53
+categories: 版本控制
 tags:
+  - git
 ---
 #### 场景1
 > 糟了，我刚把不想要的代码，commit到本地仓库中了，但是还没有做push操作！

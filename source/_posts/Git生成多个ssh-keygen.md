@@ -1,7 +1,9 @@
 ---
 title: Git生成多个ssh-keygen
 date: 2018-05-03 22:28:09
+categories: 版本控制
 tags:
+  - git
 ---
 
 > 作为新时代的开发者，大家一般会拥有自己的Github工程。同时公司又提供单独gitlab服务器，所以经常会遇到需要在同一设备下配置多个ssh key的情况，下述会阐述如何进行设置操作：

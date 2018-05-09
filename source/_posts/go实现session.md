@@ -1,7 +1,9 @@
 ---
 title: go实现session
 date: 2018-04-28 09:45:28
+categories: go
 tags:
+  - go
 ---
 #### session是什么？
 众所周知，http协议是一个无状态的协议,每一次请求都是无状态的，所以，无法标记用户的行为，因此，我们需要一个存储来帮我们解决这件事情。于时，cookie和session便出现了。

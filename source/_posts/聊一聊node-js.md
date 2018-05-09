@@ -3,6 +3,7 @@ title: 聊一聊node.js
 date: 2018-05-03 13:49:03
 categories: node.js
 tags:
+  - node.js
 ---
 接触node.js有三年有余了，期间也参与过一些大的node项目，但回过头，感觉还是需要对这个编程框架好好的整理下，已达到深入的地方。
 

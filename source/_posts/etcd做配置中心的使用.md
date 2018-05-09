@@ -1,7 +1,9 @@
 ---
 title: etcd做配置中心的使用
 date: 2018-04-29 07:57:10
+categories: devops
 tags:
+  - etcd
 ---
 
 #### 存在的问题
