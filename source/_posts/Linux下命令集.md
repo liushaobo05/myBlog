@@ -37,6 +37,63 @@ Address: 115.239.210.27
 
 #### 系统处理
 
+##### 奇技淫巧
+```
+＃ 产生随机的十六进制数，n 是字符数
+openssl rand -hex n
+
+＃ 在当前 shell 里执行一个文件里的命令
+source /path/to/filename
+
+＃ 截取变量的前五个字符
+${variable:0:5}
+
+＃ 用 wget 抓取完整的网站目录结构，存放到本地目录中
+wget -r --no-parent --reject "index.html*" http://hostname/ -P /home/user/dirs
+
+＃ 一次创建多个目录
+mkdir -p /home/wdxtub/{test0,test1,test2}
+
+＃ 测试硬盘写入速度
+dd if=/dev/zero of=/tmp/output.img bs=8k count=256k; rm -rf /tmp/output.img
+
+＃ 测试硬盘读取速度
+hdparm -Tt /dev/sda
+
+＃ 获取文本的 md5
+echo -n "test" | md5sum
+
+＃ 获取 HTTP 头信息
+curl -I http://wdxtub.com
+
+＃ 显示所有 tcp4 监听端口
+netstat -tln4 | awk '{print $4}' | cut -f2 -d: | grep -o '[0-9]*'
+
+＃ 查看命令的运行时间
+time command
+
+＃ 查看所有的环境变量
+export
+
+＃ 文件内容对比
+cmp file1 file2
+
+＃ 内容前面会显示行号
+cat -n file
+
+＃ 查看 22 端口现在运行的程序
+lsof -i:22
+
+＃ 显示 abc 进程现在打开的文件
+lsof -c abc
+
+＃ 看进程号为 12 的进程打开了哪些文件
+lsof -p 12
+
+// etcd设置base64值
+curl -vvv http://xxx.xxx.xxx.xxx:2379/v2/keys/env-config -XPUT -d value="$(cat ../config/config.yaml | base64)"
+```
+
 ##### 修改国内源
 ```
 $cp /etc/apt/sources.list /etc/apt/sources.list_backup
