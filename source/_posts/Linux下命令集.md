@@ -18,6 +18,9 @@ $git archive --format=tar.gz --output ~/www-csrf.tar.gz HEAD $(git diff 66fa65b6
 # 查看端口使用情况
 $netstat -tunpl
 
+# 查看连接数
+$lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr| grep <进程ID>
+
 # 网络链接状态检查
 $nc ip port
 
